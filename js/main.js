@@ -8,6 +8,7 @@ const gameOverScreenNode = document.querySelector("#game-over-screen");
 
 // 1.) start button!
 const startBtnNode = document.querySelector("#start-btn");
+const gameSpaceNode = document.querySelector("#game-space");
 
 // 2.) retry button at game over!
 
@@ -18,6 +19,11 @@ const startBtnNode = document.querySelector("#start-btn");
 
 let gameIntervalId = null;
 let timeCount = null;
+let foregroundTree = [];
+let rangerObj = null;
+let poacherTruck = null;
+let poacherTruckArr = [];
+
 // let gameAudio playing
 
 
@@ -33,15 +39,35 @@ function gameStart() {
 
  gameIntervalId =  setInterval(gameLoop, Math.floor(1000 / 60));
 
+rangerObj = new Ranger();
+poacherTruck = new Poacher();
+
+function gameLoop() {
+  rangerObj.gravity();
+  // tubeObj.automaticMovement()
+  poacherTruck.forEach((tubeObj) => {
+    poacherTruck.automaticMovement();
+  });
+  // tubeDespawncheck();
+  // birdTubeCollitionCheck()
+}
+
+
+
+// console.log(poacherTruck)
+
   // adding the initial elements of the game
 
-
   // initialize the other intervals of the game
-//  tubeSpawnInterval = setInterval(spawnTube, 2000);
+//  foregroundSpawnInterval = setInterval(spawnTree, 2000);
 }
+
+
+
 
 
 
 
 //* EVENT LISTENERS
 startBtnNode.addEventListener("click", gameStart);
+gameSpaceNode.addEventListener("click", () => {rangerObj.jump()})

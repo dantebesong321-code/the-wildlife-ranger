@@ -4,10 +4,10 @@ constructor(type, yPosition){
 
    this.node = document.createElement("img");
    if (this.type === "up"){
-    this.node.src = this.node.src = "./images/obstacle_top.png"
+    this.node.src = this.node.src = "./assets/foreground-tree.png"
    }
    else if (this.type === "down"){
-     this.node.src = this.node.src = "./images/obstacle_bottom.png"
+     this.node.src = this.node.src = "./images/poacher-truck.png"
    };
 
     gameBoxNode.append(this.node); // as soon as element is created, ad to screen.

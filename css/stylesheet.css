@@ -7,26 +7,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   position: relative;
- background: #84c2eb;
-background: -moz-linear-gradient(top, #a0c4ea 0%, #c45f07 50%, #694701 100%);
+  background-color: #af9304,;
+background: linear-gradient(90deg, rgb(158, 103, 0) 0%, rgb(222, 133, 44) 50%, rgb(193, 139, 0) 100%);
+}
+
+p{
+  font-size: 2rem;
 }
 
 /* START SCREEN  */
 
-audio{
-  visibility: visible;
+audio  {
+ margin-bottom: 900px;
+  visibility: hidden;
 }
 
 #game-title {
   position: absolute;
-  margin-bottom: 180px;
+  margin-bottom: 280px;
 }
 
 #start-screen {
+  background-image: url("../assets/home-screen-background.png");
+  width:1920px;
+  height:1080px;
   display: flex;
   justify-content: center;
   background-size: cover;
-  border-radius: 24px;
+  border-radius: 16px;
+  border: white solid 5px;
 }
 
 #start-screen-content-container {
@@ -38,17 +47,35 @@ audio{
   text-align: center;
   width: 400px;
   height: 100px;
-  margin-top: 250px;
+  margin-top: 550px;
 }
+
+#game-space{
+  background-image: url("../assets/main-background-01.png");
+  /* margin-top: 40px; */
+  background-size: cover;
+  width:1920px;
+  height:1080px;
+  border-radius: 16px;
+  border: white solid 5px;
+
+  position: relative; 
+  overflow: hidden; 
+  user-select: none; 
+}
+
+
+
 
 
 /*  Buttons */
 
 #start-btn {
   background-color: rgb(169, 6, 6);
- width: 130px;
-  height: 35px;
+ width: 180px;
+  height: 50px;
   border-radius: 16px;
+  border-radius: 20px;
 }
 #start-btn:hover{
   border: white, solid, 1px;
@@ -56,9 +83,9 @@ audio{
 
 button {
   margin-top: 20px;
-  width: 130px;
-  height: 35px;
-  border-radius: 16px;
+  width: 180px;
+  height: 50px;
+  border-radius: 20px;
   border: rgb(124, 47, 0), solid, 1px;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -68,7 +95,9 @@ button {
 button:hover{
   border: white, solid, 1px;
 }
-
+button > p{
+  font-size: 20px;
+} 
 
 /*  container */
 
@@ -80,10 +109,53 @@ button:hover{
   margin: 50px;
 }
 
+
 #gameplay-screen,
 #game-over-screen {
+  position: relative;
   display: none;
 }
 
 /* GAME SCREEN */
- 
+#gameplay-screen{
+  position: relative;
+}
+
+.rate-banner{
+  display: flex;
+  justify-content: space-between;
+  width: 1600px;
+}
+
+#count-element{
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.timer, .no-of-boxes{
+  width: 80px;
+  height: 50px;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(232, 221, 214, 0.5);
+}
+
+.health-bar{
+  background-color: rgba(232, 221, 214, 0.5);
+  width: 450px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 4px;
+}
+.xter-health{
+  background-color: rgb(6, 189, 6);
+   width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  margin: 4px;
+} 

@@ -10,38 +10,52 @@
     <!-- START SCREEN -->
     <section id="start-screen" class="container">
 
-      <!-- <audio controls autoplay loop>
+  <!-- <audio controls autoplay loop>
   <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/ogg">
   <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/mpeg">
    <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/wav">
-</audio> -->
+  </audio> -->
 
-      </audio>
       <div id="game-title">
-        <img src="./assets/title art.png" width="550" alt="" />
+        <img src="./assets/title art.png" width="1100px" alt="" />
       </div>
       <div id="start-screen-content-container">
         <div class="title-area">
           <p>Click to start!</p>
         </div>
         <div class="start-screen-btns">
-          <button id="start-btn">Start Game</button>
-          <button>Create Account</button>
+          <button id="start-btn"><p>Start Game</p></button>
+          <button><p>Create Account</p></button>
         </div>
       </div>
-      <img src="./assets/End background.png" width="80%" alt="" />
     </section>
 
     <!-- GAME SCREEN -->
     <section id="gameplay-screen" class="container">
-      <img src="./assets/Main background-1.png" width="80%" alt="" />
 
-      <!-- Timer comes here -->
-       <!-- box collection -->
+     <div class="rate-banner">
 
-      <div class="health-bar">health bar</div>
-      <div class=""> 
+       <div id="health-details">
+        <div class="health-bar">
+      <div class="xter-health"></div>
       </div>
+       </div>
+
+      <div id="count-element">
+        <div class="no-of-boxes">00</div>
+      <div class="timer">00 : 00</div>
+      </div>
+      </div>  
+
+      
+     
+
+      
+    <div id="game-space">
+        <!-- Game elements will be added here via javascript and DOM manipulation -->
+      </div>
+    </div>
+
     </section>
 
     <!-- GAME OVER SCREEN -->
@@ -52,4 +66,7 @@
   </body>
 
   <script src="./js/main.js"></script>
+  <script src="./js/foreground-tree.js"></script>
+  <script src="./js/ranger.js"></script>
+  <script src="./js/poacher-truck.js"></script>
 </html>
