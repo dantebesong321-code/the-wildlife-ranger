@@ -8,7 +8,7 @@ class Land{
     this.y = 870;
     this.width = 1920;
     this.height = 1080;
-    this.speed = 7;
+    this.speed = 8;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

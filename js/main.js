@@ -5,11 +5,12 @@ const startScreenNode = document.querySelector("#start-screen");
 const gamePlayScreenNode = document.querySelector("#gameplay-screen");
 const gameOverScreenNode = document.querySelector("#game-over-screen");
 const gameTimerNode = document.querySelector("timer");
-// const gameAudioNode = document.querySelector("audio")
 
 // 1.) start button!
 const startBtnNode = document.querySelector("#start-btn");
 const gameSpaceNode = document.querySelector("#game-space");
+const tryAgainBtnNode = document.querySelector("#try-again-btn");
+
 
 // 2.) retry button at game over!
 
@@ -17,7 +18,7 @@ const gameSpaceNode = document.querySelector("#game-space");
 
 // at splash screen, the game has not started.
 
-
+//  startScreenNode.style.display = "flex";
 let rangerObj = null;
 let poacherObj = null;
 let poacherTruckArr = [];
@@ -40,6 +41,7 @@ let landSpawnInterval = null;
 
 function gameStart() {
   startScreenNode.style.display = "none";
+  gameOverScreenNode.style.display = "none";
   gamePlayScreenNode.style.display = "flex";
   setInterval(gameLoop, Math.floor(1000 / 60)); //60 FPS
 
@@ -67,6 +69,9 @@ function gameLoop() {
   landObj.automaticMovement()
   });
   landDespawncheck()
+
+  rangerTruckCollisionCheck()
+  rangerTrapCollisionCheck()
   
 }
 
@@ -138,14 +143,66 @@ function trapDespawncheck() {
 
 
 
-
-
-
 //* GAME COLLISION
-gameOverScreenNode 
+
+function rangerTruckCollisionCheck() {
+
+ poacherTruckArr.forEach((poacherObj) => {
+    let isColliding = collisionCheck(rangerObj, poacherObj)
+    if (isColliding === true){
+      gameOver()
+    }
+  })
+
+}
+
+function collisionCheck(elem1, elem2) {
+  return (
+    elem1.x < elem2.x + elem2.width &&
+    elem1.x + elem1.width > elem2.x &&
+    elem1.y < elem2.y + elem2.height &&
+    elem1.y + elem1.height > elem2.y
+  );
+}
+
+
+function rangerTrapCollisionCheck() {
+
+ trapArr.forEach((trapObj) => {
+    let isColliding = collisionCheck(rangerObj, trapObj)
+    if (isColliding === true){
+      gameOver()
+    }
+  })
+
+}
+
+function collisionCheck(elem1, elem2) {
+  return (
+    elem1.x < elem2.x + elem2.width &&
+    elem1.x + elem1.width > elem2.x &&
+    elem1.y < elem2.y + elem2.height &&
+    elem1.y + elem1.height > elem2.y
+  );
+}
 
 
 
+
+//* EVENT LISTENERS
+
+function gameOver(){
+//1. Set clear intervals
+clearInterval(gameIntervalId)
+clearInterval(trapSpawnInterval)
+clearInterval(truckSpawnInterval)
+clearInterval(landSpawnInterval)
+
+//2. changes states
+startScreenNode.style.display = "none";
+gamePlayScreenNode.style.display = "none";
+gameOverScreenNode.style.display = "flex";
+}
 
 
 //* EVENT LISTENERS
@@ -153,3 +210,4 @@ startBtnNode.addEventListener("click", gameStart);
 gameSpaceNode.addEventListener("click", () => {
   rangerObj.jump();
 });
+tryAgainBtnNode.addEventListener("click", startScreenNode);

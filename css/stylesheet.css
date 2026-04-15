@@ -5,6 +5,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
   margin: 0;
   position: relative;
   background-color: #af9304;
@@ -29,21 +30,24 @@ audio {
 
 #game-title {
   position: absolute;
-  margin-bottom: 280px;
+  margin-bottom: 290px;
 }
 
 #start-screen {
   background-image: url("../assets/home-screen-background.png");
   width: 1920px;
   height: 1080px;
-  /* display: flex;
-  justify-content: center; */
+  /* display: flex;*/
+  justify-content: center; 
   background-size: cover;
   border-radius: 16px;
-  border: white solid 5px;
-  /* position: relative; */
-  /* overflow: hidden;
-  user-select: none; */
+  border: rgb(253, 200, 8) solid 5px;
+ 
+}
+.start-screen-btns{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 #start-screen-content-container {
@@ -65,8 +69,7 @@ audio {
   width: 1920px;
   height: 1080px;
   border-radius: 16px;
-  border: white solid 5px;
-
+  border: rgb(253, 200, 8) solid 5px;
   position: relative;
   overflow: hidden;
   user-select: none;
@@ -76,8 +79,8 @@ audio {
 
 #start-btn {
   background-color: rgb(169, 6, 6);
-  width: 180px;
-  height: 50px;
+   width: 250px;
+  height: 100px;
   border-radius: 16px;
   border-radius: 20px;
 }
@@ -87,8 +90,8 @@ audio {
 
 button {
   margin-top: 20px;
-  width: 180px;
-  height: 50px;
+  width: 250px;
+  height: 100px;
   border-radius: 20px;
   border: rgb(124, 47, 0), solid, 1px;
   text-align: center;
@@ -136,30 +139,46 @@ button > p {
   gap: 8px;
 }
 
+
 .timer,
 .no-of-boxes {
   width: 80px;
   height: 50px;
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: aliceblue;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background-color: rgba(232, 221, 214, 0.5);
 }
 
 .health-bar {
   background-color: rgba(232, 221, 214, 0.5);
-  width: 450px;
-  height: 40px;
+  width: 350px;
+  height: 50px;
   border-radius: 30px;
-  padding: 4px;
+  padding: 8px;
 }
 .xter-health {
   background-color: rgb(6, 189, 6);
-  width: 180px;
-  height: 30px;
+  width: 340px;
+  height: 40px;
   border-radius: 20px;
   margin: 4px;
+}
+
+/* GAME SCREEN */
+#game-over-screen{
+  background-image: url("../assets/gameover-screen.png");
+  background-size: cover;
+  width: 1920px;
+  height: 1080px;
+  border-radius: 16px;
+  border: rgb(253, 200, 8) solid 5px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+#try-again-btn{
+  margin-top: 550px;
 }

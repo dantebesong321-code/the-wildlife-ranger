@@ -10,7 +10,7 @@ class Ranger {
     this.height = 180;
     this.gravitySpeed = 8;
     this.jumpSpeed = 330;
-    this.onGround = this.y;
+    this.isMovingDown = true;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;
