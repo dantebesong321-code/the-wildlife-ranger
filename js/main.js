@@ -4,7 +4,7 @@
 const startScreenNode = document.querySelector("#start-screen");
 const gamePlayScreenNode = document.querySelector("#gameplay-screen");
 const gameOverScreenNode = document.querySelector("#game-over-screen");
-const gameTimerNode = document.querySelector("timer");
+const timerNode = document.querySelector("#timer");
 
 // 1.) start button!
 const startBtnNode = document.querySelector("#start-btn");
@@ -13,10 +13,19 @@ const tryAgainBtnNode = document.querySelector("#try-again-btn");
 
 
 // 2.) retry button at game over!
+ 
 
 //* GLOBAL GAME VARIABLES
 
 // at splash screen, the game has not started.
+
+//Timer
+
+let gameTime = 0;
+let timerInterval = null;
+
+
+
 
 //  startScreenNode.style.display = "flex";
 let rangerObj = null;
@@ -35,15 +44,35 @@ let truckSpawnInterval = null;
 let trapSpawnInterval = null;
 let landSpawnInterval = null;
 
-// let gameAudio playing
+
+
 
 //* GLOBAL GAME FUNCTIONS
 
 function gameStart() {
+
+
+gameTime = 0;
+
+timerInterval = setInterval(() => {
+  gameTime++;
+
+let minutes = Math.floor(gameTime / 60);
+  let seconds = gameTime % 60;
+
+let formattedTime = 
+    String(minutes).padStart(2, "0") + ":" + 
+    String(seconds).padStart(2, "0");  
+
+  timerNode.innerText = `Time: ${formattedTime}`;
+}, 1000);
+//  gameSpaceNode.append(gameTime);
+
   startScreenNode.style.display = "none";
   gameOverScreenNode.style.display = "none";
   gamePlayScreenNode.style.display = "flex";
-  setInterval(gameLoop, Math.floor(1000 / 60)); //60 FPS
+  gameIntervalId = setInterval(gameLoop, Math.floor(1000 / 60));
+  // setInterval(gameLoop, Math.floor(1000 / 60)); //60 FPS
 
   rangerObj = new Ranger();
   truckSpawnInterval = setInterval(spawnTruck, 8000);
@@ -129,7 +158,6 @@ function truckDespawncheck() {
 }
 
 
-
 function trapDespawncheck() {
   trapArr.forEach((trapObj, index) => {
     if (trapObj.x <= 0) {
@@ -138,8 +166,6 @@ function trapDespawncheck() {
     }
   });
 }
-
-
 
 
 
@@ -189,7 +215,11 @@ function collisionCheck(elem1, elem2) {
 
 
 
-//* EVENT LISTENERS
+//* GAME OVER!
+
+
+
+
 
 function gameOver(){
 //1. Set clear intervals
@@ -197,12 +227,24 @@ clearInterval(gameIntervalId)
 clearInterval(trapSpawnInterval)
 clearInterval(truckSpawnInterval)
 clearInterval(landSpawnInterval)
+clearInterval(timerInterval) 
+
+// [ poacherTruckArr,trapArr,landArr, bonusArr].forEach(obj => {
+//     obj.node.remove();
+//   });
+poacherTruckArr = [];
+  trapArr = [];
+  landArr = [];
+  // bonusArr = [];
 
 //2. changes states
 startScreenNode.style.display = "none";
 gamePlayScreenNode.style.display = "none";
 gameOverScreenNode.style.display = "flex";
+
 }
+
+console.log(gameOver)
 
 
 //* EVENT LISTENERS
@@ -210,4 +252,17 @@ startBtnNode.addEventListener("click", gameStart);
 gameSpaceNode.addEventListener("click", () => {
   rangerObj.jump();
 });
-tryAgainBtnNode.addEventListener("click", startScreenNode);
+// tryAgainBtnNode.addEventListener("click", () => {
+// startScreenNode.style.display = "flex";
+// gamePlayScreenNode.style.display = "none";
+// });
+
+tryAgainBtnNode.addEventListener("click", () => {
+  gameOverScreenNode.style.display = "none";
+  startScreenNode.style.display = "flex";
+  [...poacherTruckArr, ...trapArr, ...landArr, ...bonusArr].forEach(obj => {
+    obj.node.remove();
+  });
+
+
+});
