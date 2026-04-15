@@ -7,18 +7,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   position: relative;
-  background-color: #af9304,;
-background: linear-gradient(90deg, rgb(158, 103, 0) 0%, rgb(222, 133, 44) 50%, rgb(193, 139, 0) 100%);
+  background-color: #af9304;
+  background: linear-gradient(
+    90deg,
+    rgb(158, 103, 0) 0%,
+    rgb(222, 133, 44) 50%,
+    rgb(193, 139, 0) 100%
+  );
 }
 
-p{
+p {
   font-size: 2rem;
 }
 
 /* START SCREEN  */
 
-audio  {
- margin-bottom: 900px;
+audio {
+  margin-bottom: 900px;
   visibility: hidden;
 }
 
@@ -29,13 +34,16 @@ audio  {
 
 #start-screen {
   background-image: url("../assets/home-screen-background.png");
-  width:1920px;
-  height:1080px;
-  display: flex;
-  justify-content: center;
+  width: 1920px;
+  height: 1080px;
+  /* display: flex;
+  justify-content: center; */
   background-size: cover;
   border-radius: 16px;
   border: white solid 5px;
+  /* position: relative; */
+  /* overflow: hidden;
+  user-select: none; */
 }
 
 #start-screen-content-container {
@@ -50,34 +58,30 @@ audio  {
   margin-top: 550px;
 }
 
-#game-space{
-  background-image: url("../assets/main-background-01.png");
+#game-space {
+  background-image: url("../assets/main-background-far.png");
   /* margin-top: 40px; */
   background-size: cover;
-  width:1920px;
-  height:1080px;
+  width: 1920px;
+  height: 1080px;
   border-radius: 16px;
   border: white solid 5px;
 
-  position: relative; 
-  overflow: hidden; 
-  user-select: none; 
+  position: relative;
+  overflow: hidden;
+  user-select: none;
 }
-
-
-
-
 
 /*  Buttons */
 
 #start-btn {
   background-color: rgb(169, 6, 6);
- width: 180px;
+  width: 180px;
   height: 50px;
   border-radius: 16px;
   border-radius: 20px;
 }
-#start-btn:hover{
+#start-btn:hover {
   border: white, solid, 1px;
 }
 
@@ -92,12 +96,12 @@ button {
   background-color: rgba(87, 37, 6, 5);
   /* box-shadow: 2px 2px 7px 1px #714700; */
 }
-button:hover{
+button:hover {
   border: white, solid, 1px;
 }
-button > p{
+button > p {
   font-size: 20px;
-} 
+}
 
 /*  container */
 
@@ -109,7 +113,6 @@ button > p{
   margin: 50px;
 }
 
-
 #gameplay-screen,
 #game-over-screen {
   position: relative;
@@ -117,23 +120,24 @@ button > p{
 }
 
 /* GAME SCREEN */
-#gameplay-screen{
+#gameplay-screen {
   position: relative;
 }
 
-.rate-banner{
+.rate-banner {
   display: flex;
   justify-content: space-between;
   width: 1600px;
 }
 
-#count-element{
+#count-element {
   display: flex;
   justify-content: space-around;
   gap: 8px;
 }
 
-.timer, .no-of-boxes{
+.timer,
+.no-of-boxes {
   width: 80px;
   height: 50px;
   display: flex;
@@ -145,17 +149,17 @@ button > p{
   background-color: rgba(232, 221, 214, 0.5);
 }
 
-.health-bar{
+.health-bar {
   background-color: rgba(232, 221, 214, 0.5);
   width: 450px;
   height: 40px;
   border-radius: 30px;
   padding: 4px;
 }
-.xter-health{
+.xter-health {
   background-color: rgb(6, 189, 6);
-   width: 180px;
+  width: 180px;
   height: 30px;
   border-radius: 20px;
   margin: 4px;
-} 
+}

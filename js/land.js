@@ -1,14 +1,14 @@
-class Poacher{
+class Land{
   constructor() {
     this.node = document.createElement("img");
-    this.node.src = "./assets/poacher-truck.png";
+    this.node.src = "./assets/background-emptyland.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
     this.x = 1920;
-    this.y = 680;
-    this.width = 430;
-    this.height = 350;
-    this.speed = 18;
+    this.y = 870;
+    this.width = 1920;
+    this.height = 1080;
+    this.speed = 7;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

@@ -1,14 +1,14 @@
-class Poacher{
+class Traps{
   constructor() {
     this.node = document.createElement("img");
-    this.node.src = "./assets/poacher-truck.png";
+    this.node.src = "./assets/box-trap.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 1920;
-    this.y = 680;
-    this.width = 430;
-    this.height = 350;
-    this.speed = 18;
+    this.x = 1800;
+    this.y = 830;
+    this.width = 100;
+    this.height = 100;
+    this.speed = 13;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;
