@@ -1,18 +1,19 @@
-class BonusBox{
+
+class BonusBox {
   constructor() {
-    this.node = document.createElement("img");
-    this.node.src = "./assets/box-with-animals.png";
+      this.node = document.createElement("img");
+    this.node.src = "./assets/BonusBox.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 1800;
-    this.y = 820;
-    this.width = 100;
-    this.height = 100;
-    this.speed = 13;
+     this.x = 1800;
+    this.y = 770;
+    this.width = 150;
+    this.height = 130;
+    this.speed = 10;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;
-    this.node.style.width = `${this.height}px`;
+    this.node.style.height = `${this.height}px`;
 
     this.node.style.position = "absolute";
     this.node.style.top = `${this.y}px`;
@@ -26,3 +27,4 @@ class BonusBox{
   }
   
 }
+

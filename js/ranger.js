@@ -8,8 +8,8 @@ class Ranger {
     this.y = 570;
     this.width = 100;
     this.height = 180;
-    this.gravitySpeed = 9;
-    this.jumpSpeed = 350;
+    this.gravitySpeed = 10;
+    this.jumpSpeed = 450;
     this.isMovingDown = true;
 
     //initial adjustment of styles
@@ -22,7 +22,6 @@ class Ranger {
 
   }
 
-
   gravity() {
     if (this.y > 720) { return null}
     this.y += this.gravitySpeed;
@@ -32,11 +31,11 @@ class Ranger {
   }
 
   jump() {
+     if (this.y < 250) { return null}
     this.y -= this.jumpSpeed;
     this.node.style.top = `${this.y}px`;
   }
  
-  standing(){}
 
 
 }

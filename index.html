@@ -9,62 +9,50 @@
   <body>
     <!-- START SCREEN -->
     <section id="start-screen" class="container">
-
-  <!-- <audio controls autoplay loop>
-  <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/ogg">
-  <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/mpeg">
-   <source src="./assets/audio-visuals/693299__tayznet__icibitiko-luapula-traditional-drum.mp3" type="audio/wav">
-  </audio> -->
+      <audio controls autoplay loop>
+        <source
+          src="./assets/audio-visuals/cornist-afro-house-494416.mp3"
+          type="audio/ogg"
+        />
+      </audio>
 
       <div id="game-title">
         <img src="./assets/title art.png" width="1100px" alt="" />
       </div>
       <div id="start-screen-content-container">
-        <div class="title-area">
-          <p>Click to start!</p>
-        </div>
         <div class="start-screen-btns">
           <button id="start-btn"><p>Start Game</p></button>
-          <button><p>Input Name</p></button>
         </div>
+      </div>
+      <div class="title-area">
+        <p>
+          Save the animals! Collect minimum 5 boxes to win. Watch out for obstacles!
+        </p>
       </div>
     </section>
 
     <!-- GAME SCREEN -->
     <section id="gameplay-screen" class="container">
-          
+      <div id="game-space">
 
-     <div class="rate-banner">
+       <div class="rate-banner">
+          <!-- <div id="health-details"> -->
+            <div id="count-element">
+              <div id="box-count">
+              </div>
 
-       <div id="health-details">
-        <div class="health-bar">
-      <div class="xter-health"></div>
+              <div id="timer"><p></p></div>
+            </div>
+        </div>
       </div>
-       </div>
-
-      <div id="count-element">
-        <div class="no-of-boxes"></div>
-      <div id="timer"><p></p></div>
-      </div>
-      </div>  
-
-      
-     
-
-      
-    <div id="game-space">
-        <!-- Game elements will be added here via javascript and DOM manipulation -->
-      </div>
-    </div>
-
     </section>
 
     <!-- GAME OVER SCREEN -->
     <search id="game-over-screen" class="container">
+      <div id="bonus-count"></div>  <!-- in gameplay HUD -->
+       <p id="result-message"></p>  
       <button id="try-again-btn"><p>Try Again!</p></button>
-
     </search>
-
   </body>
 
   <script src="./js/main.js"></script>
@@ -72,4 +60,6 @@
   <script src="./js/poacher-truck.js"></script>
   <script src="./js/poacher-traps.js"></script>
   <script src="./js/land.js"></script>
+  <script src="./js/bonus-box.js"></script>
+   <script src="./js/foreground-tree.js"></script>
 </html>
