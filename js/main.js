@@ -19,12 +19,11 @@ const tryAgainBtnNode = document.querySelector("#try-again-btn");
 
 // at splash screen, the game has not started.
 
-//Timer
 
+
+//Timer
 let gameTime = 0;
 let timerInterval = null;
-
-
 
 
 //  startScreenNode.style.display = "flex";
@@ -51,28 +50,33 @@ let landSpawnInterval = null;
 
 function gameStart() {
 
-
-gameTime = 0;
+gameTime = 60;
+timerInterval = null;
 
 timerInterval = setInterval(() => {
-  gameTime++;
+  gameTime--;
 
 let minutes = Math.floor(gameTime / 60);
-  let seconds = gameTime % 60;
+let seconds = gameTime % 60;
 
 let formattedTime = 
     String(minutes).padStart(2, "0") + ":" + 
     String(seconds).padStart(2, "0");  
 
-  timerNode.innerText = `Time: ${formattedTime}`;
+  timerNode.innerText = formattedTime;
+
+  if(gameTime <= 0){ gameOver();
+
+  }
+else if(gameTime <= 20){timerNode.style.color = "red";}
+else {timerNode.style.color = "white";}
+
 }, 1000);
-//  gameSpaceNode.append(gameTime);
 
   startScreenNode.style.display = "none";
   gameOverScreenNode.style.display = "none";
   gamePlayScreenNode.style.display = "flex";
   gameIntervalId = setInterval(gameLoop, Math.floor(1000 / 60));
-  // setInterval(gameLoop, Math.floor(1000 / 60)); //60 FPS
 
   rangerObj = new Ranger();
   truckSpawnInterval = setInterval(spawnTruck, 8000);
@@ -229,7 +233,7 @@ clearInterval(truckSpawnInterval)
 clearInterval(landSpawnInterval)
 clearInterval(timerInterval) 
 
-// [ poacherTruckArr,trapArr,landArr, bonusArr].forEach(obj => {
+//const allArr = [ poacherTruckArr,trapArr,landArr, bonusArr].forEach(obj => {
 //     obj.node.remove();
 //   });
 poacherTruckArr = [];
