@@ -74,7 +74,7 @@ function clearAllObjects() {
 }
 
 //* AUDIO
-gameAudioNode.volume = 0.2;
+gameAudioNode.volume = 0.1;
 
 
 //* BONUS UI
