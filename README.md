@@ -39,3 +39,5 @@ Deployed: https://dantebesong321-code.github.io/the-wildlife-ranger/
 Sketches: https://www.figma.com/design/ZVhUjfNfIyddzw98mFOsJf/Game-Project-Ideation?node-id=0-1&t=GH71ahD1Jtfg2QQ0-1
 
 Audio:  https://pixabay.com/de/music/weiches-haus-afro-house-494416/
+
+Presentation: https://docs.google.com/presentation/d/1qF4xFzO_J5HZALFM3tt2Mo-eG8A53MHoOjtJSRmpaFE/edit?usp=sharing
