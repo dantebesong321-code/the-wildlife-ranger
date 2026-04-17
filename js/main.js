@@ -27,14 +27,12 @@ let trapArr = [];
 let bonusArr = [];
 let landArr = [];
 
-
 // Intervals
 let gameIntervalId = null;
 let truckSpawnInterval = null;
 let trapSpawnInterval = null;
 let bonusSpawnInterval = null;
 let landSpawnInterval = null;
-
 
 //* CLEANUP FUNCTIONS
 
@@ -76,7 +74,6 @@ function clearAllObjects() {
 //* AUDIO
 gameAudioNode.volume = 0.1;
 
-
 //* BONUS UI
 
 function updateBonusUI() {
@@ -93,9 +90,7 @@ function gameStart() {
   bonusCount = 0;
   updateBonusUI();
 
-const gameMusic = 
-
-  gameTime = 60;
+  const gameMusic = (gameTime = 60);
   timerInterval = setInterval(() => {
     gameTime--;
 
@@ -264,10 +259,10 @@ function collectBonus(index) {
     return;
   }
 
-   // Bonus collection time Impact: Time frame scales dynamicly each time a bonus is collected
+  // Bonus collection time Impact: Time frame scales dynamicly each time a bonus is collected
   timerNode.style.transform = "scale(1.3)";
   setTimeout(() => {
-  timerNode.style.transform = "scale(1)";
+    timerNode.style.transform = "scale(1)";
   }, 150);
 }
 
@@ -296,7 +291,7 @@ function gameOver(outcome) {
   } else if (bonusCount < 5) {
     msgEl.innerText =
       "Mission failed. Only " +
-      bonusCount + 
+      bonusCount +
       " bonus" +
       (bonusCount === 1 ? "" : "es") +
       " collected. Need at least 5.";

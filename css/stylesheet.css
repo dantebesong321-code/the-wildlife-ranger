@@ -128,8 +128,10 @@ button > p {
 }
 
 .rate-banner {
+  display: flex;
+  justify-content: center;
   width: 1000px;
-  padding: 8px;
+  padding: 16px;
 }
 
 #count-element {
@@ -140,10 +142,10 @@ button > p {
   width: 1000px;
   height: 70px;
   padding: 24px;
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: 5px 1.5px 25px 0.2px #000000;
   margin: 24px;
-  border: rgb(255, 255, 255), solid, 2px;
+  border: rgb(255, 255, 255), solid, 1px;
 }
 
 #timer {

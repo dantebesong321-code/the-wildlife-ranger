@@ -22,7 +22,7 @@ The game starts with 60 seconds. Timer updates every second and changes color ba
 - Bonus Boxes: Increase bonus count and add time.
 
 # Audio
-- Within the game is embeded background music to set the game tone. source: https://pixabay.com/de/music/weiches-haus-afro-house-494416/
+- Within the game is embeded background music to set the game tone.
  
 
  # AI Usage:
@@ -33,4 +33,9 @@ The game starts with 60 seconds. Timer updates every second and changes color ba
   - I designed all artworks myself with figma. The idea was to accurately get the mood I wanted for the game. However, for the Start screen I used ChatGPT to refine a little while staying aligned to the orginal piece.
 
 
+# Links:
+Deployed: https://dantebesong321-code.github.io/the-wildlife-ranger/
 
+Sketches: https://www.figma.com/design/ZVhUjfNfIyddzw98mFOsJf/Game-Project-Ideation?node-id=0-1&t=GH71ahD1Jtfg2QQ0-1
+
+Audio:  https://pixabay.com/de/music/weiches-haus-afro-house-494416/
