@@ -1,8 +1,6 @@
 # The-Wildlife-Ranger-JS-Game-project
 A wildlife ranger must rescue endangered animals from poachers. In order to succeed in his mission, he must race against time and avoid obstacles along his way.
 
-This is a browser-based survival game where the player controls a ranger navigating a dangerous environment. The goal is to collect 10 bonuses while avoiding threats and managing limited time.
-
 # Overview
 This is a browser-based survival game where the player controls a ranger who must avoid obstacles and collect bonuses before time runs out. The goal is to collect 10 bonuses to win, while avoiding traps and poacher trucks.
 
