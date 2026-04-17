@@ -5,7 +5,7 @@ class Land{
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
     this.x = 1920;
-    this.y = 870;
+    this.y = 882;
     this.width = 1920;
     this.height = 1080;
     this.speed = 12;

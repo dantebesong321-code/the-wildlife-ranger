@@ -5,10 +5,10 @@ class Traps{
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
     this.x = 1800;
-    this.y = 770;
+    this.y = 771;
     this.width = 150;
     this.height = 130;
-    this.speed = 15;
+    this.speed = 16;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

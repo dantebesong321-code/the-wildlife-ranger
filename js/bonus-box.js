@@ -7,9 +7,9 @@ class BonusBox {
 
      this.x = 1800;
     this.y = 770;
-    this.width = 150;
-    this.height = 130;
-    this.speed = 10;
+    this.width = 130;
+    this.height = 110;
+    this.speed = 12;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

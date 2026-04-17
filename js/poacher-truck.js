@@ -5,10 +5,10 @@ class Poacher{
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
     this.x = 1920;
-    this.y = 680;
-    this.width = 430;
-    this.height = 350;
-    this.speed = 18;
+    this.y = 650;
+    this.width = 530;
+    this.height = 450;
+    this.speed = 20;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

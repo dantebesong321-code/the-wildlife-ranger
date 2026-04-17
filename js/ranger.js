@@ -8,8 +8,8 @@ class Ranger {
     this.y = 570;
     this.width = 100;
     this.height = 180;
-    this.gravitySpeed = 10;
-    this.jumpSpeed = 450;
+    this.gravitySpeed = 12;
+    this.jumpSpeed = 455;
     this.isMovingDown = true;
 
     //initial adjustment of styles
@@ -29,6 +29,7 @@ class Ranger {
     
 
   }
+  
 
   jump() {
      if (this.y < 250) { return null}
