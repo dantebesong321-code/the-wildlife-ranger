@@ -24,3 +24,13 @@ The game starts with 60 seconds. Timer updates every second and changes color ba
 # Audio
 - Within the game is embeded background music to set the game tone. source: https://pixabay.com/de/music/weiches-haus-afro-house-494416/
  
+
+ # AI Usage:
+ - ChatGPT to refine my concept development
+ - Claude to clean me code and compare with alternative direction. Also obtained explanation for blockage and possible solutions.
+
+  # Game artworks:
+  - I designed all artworks myself with figma. The idea was to accurately get the mood I wanted for the game. However, for the Start screen I used ChatGPT to refine a little while staying aligned to the orginal piece.
+
+
+

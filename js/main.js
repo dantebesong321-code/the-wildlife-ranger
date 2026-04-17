@@ -264,6 +264,7 @@ function collectBonus(index) {
     return;
   }
 
+   // Bonus collection time Impact: Time frame scales dynamicly each time a bonus is collected
   timerNode.style.transform = "scale(1.3)";
   setTimeout(() => {
   timerNode.style.transform = "scale(1)";
