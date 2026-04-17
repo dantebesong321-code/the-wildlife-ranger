@@ -4,11 +4,11 @@ class Poacher{
     this.node.src = "./assets/poacher-truck.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 1920;
-    this.y = 650;
-    this.width = 530;
-    this.height = 450;
-    this.speed = 20;
+    this.x = 900;
+    this.y = 410;
+    this.width = 130;
+    this.height = 250;
+    this.speed = 10;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

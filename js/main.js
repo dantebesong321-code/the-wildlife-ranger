@@ -5,6 +5,7 @@ const gamePlayScreenNode = document.querySelector("#gameplay-screen");
 const gameOverScreenNode = document.querySelector("#game-over-screen");
 const timerNode = document.querySelector("#timer");
 const healthBarNode = document.querySelector("#health-bar");
+const gameAudioNode = document.querySelector("#gameAudio audio");
 
 const startBtnNode = document.querySelector("#start-btn");
 const gameSpaceNode = document.querySelector("#game-space");
@@ -26,12 +27,14 @@ let trapArr = [];
 let bonusArr = [];
 let landArr = [];
 
+
 // Intervals
 let gameIntervalId = null;
 let truckSpawnInterval = null;
 let trapSpawnInterval = null;
 let bonusSpawnInterval = null;
 let landSpawnInterval = null;
+
 
 //* CLEANUP FUNCTIONS
 
@@ -70,6 +73,10 @@ function clearAllObjects() {
   landArr = [];
 }
 
+//* AUDIO
+gameAudioNode.volume = 0.2;
+
+
 //* BONUS UI
 
 function updateBonusUI() {
@@ -86,7 +93,7 @@ function gameStart() {
   bonusCount = 0;
   updateBonusUI();
 
-  // let treeObj = new Tree();
+const gameMusic = 
 
   gameTime = 60;
   timerInterval = setInterval(() => {
@@ -118,7 +125,7 @@ function gameStart() {
   rangerObj = new Ranger();
 
   gameIntervalId = setInterval(gameLoop, Math.floor(1000 / 60));
-  truckSpawnInterval = setInterval(spawnTruck, 8000);
+  truckSpawnInterval = setInterval(spawnTruck, 8500);
   bonusSpawnInterval = setInterval(spawnBonus, 3000);
   trapSpawnInterval = setInterval(spawnTrap, 1500);
   landSpawnInterval = setInterval(spawnLand, 2000);
@@ -259,7 +266,7 @@ function collectBonus(index) {
 
   timerNode.style.transform = "scale(1.3)";
   setTimeout(() => {
-    timerNode.style.transform = "scale(1)";
+  timerNode.style.transform = "scale(1)";
   }, 150);
 }
 

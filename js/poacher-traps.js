@@ -4,11 +4,11 @@ class Traps{
     this.node.src = "./assets/box-trap.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 1800;
-    this.y = 771;
-    this.width = 150;
-    this.height = 130;
-    this.speed = 16;
+    this.x = 900;
+    this.y = 460;
+    this.width = 90;
+    this.height = 70;
+    this.speed = 9;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

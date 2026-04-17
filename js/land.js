@@ -4,11 +4,11 @@ class Land{
     this.node.src = "./assets/background-emptyland.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 1920;
-    this.y = 882;
-    this.width = 1920;
-    this.height = 1080;
-    this.speed = 12;
+    this.x = 1095;
+    this.y = 530;
+    this.width = 1000;
+    this.height = 630;
+    this.speed = 10;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

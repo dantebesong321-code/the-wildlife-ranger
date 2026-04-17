@@ -8,45 +8,38 @@ body {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   margin: 0;
-  padding-top: 400px;
+  padding-top: 100px;
   position: relative;
   background: #a6a17a;
   background: -moz-linear-gradient(top, #6d6c17 0%, #b87c0e 50%, #827a20 100%);
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.1rem;
 }
 
 /* START SCREEN  */
 
-audio {
-  margin-bottom: 900px;
+#gameAudio {
+  margin-bottom: 500px;
   visibility: hidden;
-  border: #6d6c17 solid 5px;
-  border-radius: 30px;
 }
 
 #game-title {
   position: absolute;
-  margin-bottom: 400px;
+  margin-bottom: 250px;
 }
 
 #start-screen {
   background-image: url("../assets/afrikanische-savanne-bei-sonnenuntergang-1.png");
-  width: 1920px;
-  height: 1080px;
+  width: 1095px;
+  height: 630px;
   display: flex;
   margin: auto;
   justify-content: center;
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 18px;
   border: rgb(253, 200, 8) solid 5px;
-}
-.start-screen-btns {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
 }
 
 #start-screen-content-container {
@@ -56,27 +49,26 @@ audio {
   justify-content: center;
   align-content: center;
   text-align: center;
-  width: 400px;
+  width: 300px;
   height: 100px;
-  margin-top: 550px;
+  margin-top: 200px;
 }
 
 .title-area {
-  width: 1000px;
+  width: 400px;
   position: absolute;
-  margin-top: 900px;
+  margin-top: 520px;
   margin-bottom: 70px;
   text-align: center;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 #game-space {
   background-image: url("../assets/main-background-far.png");
-  /* margin-top: 40px; */
   background-size: cover;
-  width: 1920px;
-  height: 1080px;
-  border-radius: 16px;
+  width: 1095px;
+  height: 630px;
+  border-radius: 18px;
   border: rgb(253, 200, 8) solid 9px;
   position: relative;
   overflow: hidden;
@@ -86,10 +78,11 @@ audio {
 /*  Buttons */
 
 #start-btn {
+  margin-top: 70px;
   background-color: rgb(169, 6, 6);
-  width: 250px;
-  height: 100px;
-  border-radius: 20px;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
 }
 #start-btn:hover {
   border: white, solid, 1px;
@@ -97,9 +90,9 @@ audio {
 
 button {
   margin-top: 20px;
-  width: 250px;
-  height: 100px;
-  border-radius: 20px;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
   border: rgb(225, 155, 111), solid, 1px;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -110,7 +103,7 @@ button:hover {
   border: white, solid, 1px;
 }
 button > p {
-  font-size: 30px;
+  font-size: 15px;
 }
 
 /*  container */
@@ -135,7 +128,7 @@ button > p {
 }
 
 .rate-banner {
-  width: 1600px;
+  width: 1000px;
   padding: 8px;
 }
 
@@ -144,30 +137,28 @@ button > p {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(173, 148, 3, 0.3);
-  width: 1800px;
-  height: 100px;
+  width: 1000px;
+  height: 80px;
   padding: 24px;
-  border-radius: 55px;
-box-shadow: 5px 1.5px 25px 0.2px #000000;
+  border-radius: 20px;
+  box-shadow: 5px 1.5px 25px 0.2px #000000;
   margin: 24px;
-  border: rgb(255, 255, 255), solid, 3px;
-
+  border: rgb(255, 255, 255), solid, 2px;
 }
 
 #timer {
-  width: 180px;
-  height: 100px;
+  width: 120px;
+  height: 80px;
   display: flex;
   background-color: rgba(195, 144, 34, 0.7);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
   border: rgb(255, 255, 255), solid, 3px;
 }
-
 
 #bonus-hud {
   display: flex;
@@ -175,32 +166,22 @@ box-shadow: 5px 1.5px 25px 0.2px #000000;
   align-items: center;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-  width: 180px;
-  height: 100px;
+  width: 120px;
+  height: 80px;
   background-color: rgba(195, 144, 34, 0.7);
   border-radius: 30px;
   border: rgb(255, 255, 255), solid, 3px;
-}
-
-@keyframes bonusPulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.3); }
-  100% { transform: scale(1); }
-}
-
-.bonus-pulse {
-  animation: 0.2s ease;
 }
 
 /* GAME SCREEN */
 #game-over-screen {
   background-image: url("../assets/gameover-screen.png");
   background-size: cover;
-  width: 1920px;
-  height: 1080px;
-  border-radius: 16px;
+  width: 1095px;
+  height: 630px;
+  border-radius: 18px;
   border: rgb(253, 200, 8) solid 5px;
   position: relative;
   overflow: hidden;
@@ -209,5 +190,5 @@ box-shadow: 5px 1.5px 25px 0.2px #000000;
 }
 
 #try-again-btn {
-  margin-top: 550px;
+  margin-top: 400px;
 }

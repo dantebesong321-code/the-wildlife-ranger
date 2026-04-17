@@ -5,11 +5,11 @@ class BonusBox {
     this.node.src = "./assets/BonusBox.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-     this.x = 1800;
-    this.y = 770;
-    this.width = 130;
-    this.height = 110;
-    this.speed = 12;
+     this.x = 900;
+    this.y = 450;
+    this.width = 80;
+    this.height = 80;
+    this.speed = 7;
 
     //initial adjustment of styles
     this.node.style.width = `${this.width}px`;

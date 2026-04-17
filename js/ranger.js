@@ -4,12 +4,12 @@ class Ranger {
     this.node.src = "./assets/ranger.png";
     gameSpaceNode.append(this.node); // as soon as element is created, ad to screen.
 
-    this.x = 590;
-    this.y = 570;
-    this.width = 100;
-    this.height = 180;
-    this.gravitySpeed = 12;
-    this.jumpSpeed = 455;
+    this.x = 350;
+    this.y = 410;
+    this.width = 70;
+    this.height = 110;
+    this.gravitySpeed = 10;
+    this.jumpSpeed = 465;
     this.isMovingDown = true;
 
     //initial adjustment of styles
@@ -23,7 +23,7 @@ class Ranger {
   }
 
   gravity() {
-    if (this.y > 720) { return null}
+    if (this.y > 430) { return null}
     this.y += this.gravitySpeed;
     this.node.style.top = `${this.y}px`;
     
@@ -32,11 +32,10 @@ class Ranger {
   
 
   jump() {
-     if (this.y < 250) { return null}
+     if (this.y < 130) { return null}
     this.y -= this.jumpSpeed;
     this.node.style.top = `${this.y}px`;
   }
  
-
 
 }
